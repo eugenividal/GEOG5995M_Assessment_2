@@ -10,8 +10,8 @@ import random
 # Define a drunk class.
 class Drunk():
     def __init__(self, environment, drunks):
-        self.drunks = drunks
         self.environment = environment
+        self.drunks = drunks
         self.store = 0
         self.x = random.randint (139,159)
         self.y = random.randint (139,159)
@@ -31,7 +31,7 @@ class Drunk():
 
 # Method to eat. 
     def steps(self):
-            self.environment[self.y][self.x] < 1
+        if self.environment[self.y][self.x] < 1:
             self.environment[self.y][self.x] += 1
             self.store += 1       
 

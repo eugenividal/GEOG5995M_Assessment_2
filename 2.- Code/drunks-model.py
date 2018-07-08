@@ -5,16 +5,19 @@ Created on Tue Jan  2 19:56:36 2018
 
 @author: Eugeni Vidal
 """
-import matplotlib.pyplot
-import matplotlib.animation 
+
+# First, we import all packages we will need for the code
+ 
 import csv
+import matplotlib.pyplot
+import matplotlib.animation
 import drunkframework
 
-#1.Pull in the data file and finds out the pub point and the home points
-
-# Set up environment list (before the drunks list).
+# Set up the environment
+## Create the list.
 environment = []
-# Read enviroment data.
+
+## Read the raster data.
 f = open('drunk.plan.txt', newline='')
 reader = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
 
@@ -25,13 +28,21 @@ for row in reader:
     environment.append(rowlist)
 f.close()
 
-#3.Models the drunks leaving their pub and reaching their homes, 
+"""
+# Check how the envrinment looks
+matplotlib.pyplot.xlim(0, 300)
+matplotlib.pyplot.ylim(0, 300)
+matplotlib.pyplot.imshow(environment)
+matplotlib.pyplot.show()
+"""
+
+# Model the drunks leaving their pub and reaching their homes, 
 #and stores how many drunks pass through each point on the map.
 # Set up drunks list.
+drunks = []
 num_of_drunks = 25; #number drunks range(10, 250, 10)
 num_of_iterations = 1000
 #num_of_iterations = 100 instead of itetactions from the bpub to home
-drunks = []
 
 # Make the drunks.
 for i in range(num_of_drunks):
@@ -41,7 +52,7 @@ for i in range(num_of_drunks):
 for j in range (num_of_iterations): 
     for i in range(num_of_drunks):
         drunks[i].move()
-        drunks[i].path()
+        drunks[i].steps()
 
 #for i in range(num_of_drunks):
 #    print("steps" + " " +str(drunks[i].store))
