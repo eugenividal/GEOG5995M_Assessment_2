@@ -1,13 +1,13 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jan  2 19:56:36 2018
+Created on Wed Jul 11 11:48:17 2018
 
-@author: Eugeni Vidal
+@author: ts16evt
 """
 
 # First, we import all packages we will need for the code
  
+import random
 import csv
 import matplotlib.pyplot
 import matplotlib.animation
@@ -25,6 +25,8 @@ for row in reader:
     rowlist =[]
     for value in row:
         rowlist.append(value)
+        if value == 1:
+            print('PUB')
     environment.append(rowlist)
 f.close()
 
@@ -44,15 +46,29 @@ num_of_drunks = 25; #number drunks range(10, 250, 10)
 num_of_iterations = 1000
 #num_of_iterations = 100 instead of itetactions from the bpub to home
 
+# Animating.
+fig = matplotlib.pyplot.figure(figsize=(5, 5))
+ax = fig.add_axes([0, 0, 1, 1])
+
 # Make the drunks.
 for i in range(num_of_drunks):
     drunks.append(drunkframework.Drunk(environment, drunks))
     
 # Move the drunks. we should move them from the pub to the house
 for j in range (num_of_iterations): 
-    for i in range(num_of_drunks):
-        drunks[i].move()
-        drunks[i].steps()
+      random.shuffle(drunks) # Shuffle the list of agests each iteration before they do their stuff. 
+      for i in range(num_of_drunks):
+           drunks[i].move()
+           drunks[i].steps()
+
+## Saves the density map to a file as text.
+a = []
+for i in range(100):
+    a.append("All work and no play makes Jack a dull boy ");
+f = open("drunks.density.txt", 'w')
+for line in a:
+	f.write(line)
+f.close()
 
 #for i in range(num_of_drunks):
 #    print("steps" + " " +str(drunks[i].store))

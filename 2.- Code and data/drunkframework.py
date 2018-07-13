@@ -1,17 +1,16 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jan  3 03:02:07 2018
+Created on Wed Jul 11 11:51:04 2018
 
-@author: Eugeni Vidal
+@author: ts16evt
 """
 import random
 
 # Define a drunk class.
 class Drunk():
     def __init__(self, environment, drunks):
-        self.environment = environment
         self.drunks = drunks
+        self.environment = environment
         self.store = 0
         self.x = random.randint (139,159)
         self.y = random.randint (139,159)
