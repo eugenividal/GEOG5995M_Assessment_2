@@ -8,7 +8,7 @@ To run it three files (in the folder `Code and data`) are needed:
 - the drunkframework.py (code for the class), and
 - the drunk.plan.txt (the environment data map).
 
-Instructions to run it:
+Then, follow these steps:
 
 1st. Open Spyder (IDE) in your computer and add the three files in the editor.
  
