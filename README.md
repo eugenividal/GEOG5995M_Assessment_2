@@ -1,6 +1,6 @@
 # 'Planning for Drunks'
 
-This agent-based model (ABM) simulates drunk people on their way back home from the town's pub and it is the assessment 2 for the module **GEOG5995M Programming for Social Science: Core Skills**.   
+This project is the assessment 2 for the module **GEOG5995M Programming for Social Science: Core Skills** and consists in the design of an agent-based model (ABM) that simulates drunk people on their way back home after a night out in the town's pub. 
 
 To run it three files (in the folder `Code and data`) are needed: 
 
