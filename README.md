@@ -4,12 +4,12 @@ This project is the assessment 2 for the module **GEOG5995M Programming for Soci
 
 Instructions to run it:
 
-Three files that you will find in the folder `Code and data` are necessary:
+1st. Make sure that the general folder 201081646_GEOG5995M is unzipped.
 
-- the drunks-model.py (the model code),
-- the drunkframework.py (the class code), and
+2nd. Open Spyder (IDE) in your computer and add to the editor the three files that you will find in the `Code and data` folder (inside GEOG5995M_Assessment_2):
+
+- the drunks-model.py (the model code);
+- the drunkframework.py (the class code); and
 - the drunk.plan.txt (the environment data map).
 
-1st. Open Spyder (IDE) in your computer and add the three files above in the editor.
-
-2nd. Run first the drunkframework.py file, and then the drunks-model.py file. In approx 10 sec. you will see a map with the drunks and their steps density in the console, as well as a new file called environment.density.txt in the `Code and data` folder.
+3rd. Run first the drunkframework.py file, and then the drunks-model.py file. In approx 10 secondes you will see a map with the drunks and their steps' density in the console, as well as a new file called environment.density.txt in the `Code and data` folder.
