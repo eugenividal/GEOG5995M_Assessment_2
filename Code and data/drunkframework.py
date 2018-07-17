@@ -12,9 +12,9 @@ class Drunk():
     def __init__(self, environment, drunks, name):
         self.drunks = drunks
         self.environment = environment
-        self.x = 158 
+        self.x = 158 # Random coordinates with 1s.
         self.y = 148
-        self.name = name
+        self.name = name 
 
 # Method to move.
 # % is a torus boundary in order to keep the drunks inside the defined environment.
@@ -29,7 +29,7 @@ class Drunk():
         else:
             self.x = (self.x - 1) % 300
 
-# Method to eat. 
+# Method to monitor density. 
     def steps(self):
         self.environment[self.y][self.x] += 1      
 
