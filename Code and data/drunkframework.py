@@ -1,19 +1,20 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jul 11 11:51:04 2018
+GEOG5995M Programming for Social Science: Core Skills
+@author: Eugeni Vidal
 
-@author: ts16evt
 """
 import random
 
 # Define a drunk class.
 class Drunk():
-    def __init__(self, environment, drunks):
+    def __init__(self, environment, drunks, name):
         self.drunks = drunks
         self.environment = environment
-        self.store = 0
-        self.x = random.randint (139,159)
-        self.y = random.randint (139,159)
+        self.x = 158 
+        self.y = 148
+        self.name = name
 
 # Method to move.
 # % is a torus boundary in order to keep the drunks inside the defined environment.
@@ -30,8 +31,5 @@ class Drunk():
 
 # Method to eat. 
     def steps(self):
-        if self.environment[self.y][self.x] < 1:
-            self.environment[self.y][self.x] += 1
-            self.store += 1       
+        self.environment[self.y][self.x] += 1      
 
-#def go_home(self)
